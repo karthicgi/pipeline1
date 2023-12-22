@@ -8,14 +8,14 @@ pipeline {
         }
          stage ("2. service install") {
             steps {
-                sh "sudo yum update -y"
-                sh "sudo yum install -y docker"
+                sh "yum update -y"
+                sh "yum install -y docker"
             }
         }
         stage ("3. service start") {
             steps {
-                sh "sudo systemctl restart docker"
-                sh "sudo systemctl enable docker"
+                sh "systemctl restart docker"
+                sh "systemctl enable docker"
             }
         }
         stage ("4. nginx") {

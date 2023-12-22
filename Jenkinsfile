@@ -1,11 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage ("1. install nginx") {
+        stage ("1. yum update") {
             steps {
-                sh "yum install -y nginx"
-                sh "mkdir -p inbound"
-                sh "mkdir -p outbound"
+                sh "yum update -y"
             }
         }
          stage ("2. service install") {

@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage ("1. install nginx") {
             steps {
-                sh " yum install -y nginx"
+                sh "yum install -y nginx"
                 sh "mkdir -p inbound"
                 sh "mkdir -p outbound"
             }

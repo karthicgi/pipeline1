@@ -41,7 +41,7 @@ pipeline {
         }
         stage ("7. get inside folder") {
 	    steps {
-	            sh "sudo chmod -R 677 /home/ec2-user/"
+	            sh "sudo chmod -R 777 /home/ec2-user/"
                 sh "cd /home/ec2-user/"
                 writeFile(file: "/home/ec2-user/index.html", text: "this is besant website", encoding: "UTF-8") 
 	     }
